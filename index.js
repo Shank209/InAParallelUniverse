@@ -256,6 +256,8 @@ $(window).resize(function() {
 });
 
 $(window).load(function (){
+	$('.jtextfill').textfill({ maxFontPixels: 400 });
+	
 	position_footer();
 });
 
