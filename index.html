@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<meta name="description" content="Find out what's happening in a Parallel Universe" />
+		
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		
+		<link rel="stylesheet" type="text/css" href="jquery-letterfx.min.css" />
+		
+		<title>In A Parallel Universe</title>
+		
+		<link rel="shortcut icon" href="alien.png" type="image/x-icon" />
+		
+		<link rel="icon" href="alien.png" type="image/x-icon" />
+		
+		<script src="jquery.js"></script>
+	</head>
+	
+	<body>
+		<div id="bg"></div>
+		
+		<div id="container">
+			<p id="parallel">In a Parallel Universe...</p>
+			
+			<div class='jtextfill'>
+				<span id="sentence"></span>
+			</div>
+			
+			<p id="gen">And Also...</p>
+		</div>
+		
+		<div id="footer"><img id="fb_share" src="fb-share.png" onclick="share()"/></div>
+		
+		<script src="index.js"></script>
+		
+		<script src="tuxsudo.min.js"></script>
+		
+		<script src="jquery-letterfx.min.js"></script>
+		
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-51529083-2', 'site44.com');
+			ga('send', 'pageview');
+			
+			window.fbAsyncInit = function() {
+			FB.init({
+			  appId      : '250378521833303',
+			  channelUrl : 'http://inaparalleluniverse.site44.com/channel.html',
+			  xfbml      : true,
+			  version    : 'v2.0'
+			});
+			};
+
+			(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "http://connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			
+			function share()
+			{
+				FB.ui(
+				{
+				method: 'feed',
+				name: 'In A Parallel Universe,',
+				caption: 'Some really crazy stuff is happening...',
+				description: (
+				sentence
+				),
+				link: 'http://thatpixeldude.github.io/InAParallelUniverse/',
+				picture: 'http://s28.postimg.org/gn1vf06r1/post.jpg'
+				}
+				);
+			}
+		</script>
+	</body>
+</html>
